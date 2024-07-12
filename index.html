@@ -9,8 +9,8 @@
 <body>
   <header>
     <div class="container">
-      <h1>Nail Salon</h1>
       <nav>
+        <h1>Nail Salon</h1>
         <ul>
           <li><a href="#services">Services</a></li>
           <li><a href="#about">About Us</a></li>
@@ -21,52 +21,69 @@
   </header>
 
   <section id="hero">
-    <div class="container">
-      <h2>Welcome to our Nail Salon</h2>
-      <p>Book your appointment now!</p>
+    <div class="hero-content">
+      <h2>Welcome to Our Nail Salon</h2>
+      <p>Experience professional nail care in a relaxing environment.</p>
+      <a href="#booking" class="btn">Book Now</a>
     </div>
   </section>
 
-  <section id="booking">
+  <section id="services" class="section-bg">
     <div class="container">
-      <h2>Book an Appointment</h2>
-      <form id="bookingForm" action="submit_booking.php" method="POST">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-item">
+          <img src="service1.jpg" alt="Manicure">
+          <h3>Manicure</h3>
+          <p>Enjoy our luxurious manicure treatments.</p>
         </div>
-
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
+        <div class="service-item">
+          <img src="service2.jpg" alt="Pedicure">
+          <h3>Pedicure</h3>
+          <p>Relax with our rejuvenating pedicure services.</p>
         </div>
-
-        <div class="form-group">
-          <label for="phone">Phone:</label>
-          <input type="tel" id="phone" name="phone" required>
+        <div class="service-item">
+          <img src="service3.jpg" alt="Nail Art">
+          <h3>Nail Art</h3>
+          <p>Express yourself with our creative nail art designs.</p>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="form-group">
-          <label for="date">Date:</label>
-          <input type="date" id="date" name="date" required>
-        </div>
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <div class="about-content">
+        <img src="about.jpg" alt="About Us">
+        <p>Founded in Siegen, Germany, our salon combines expertise with a passion for beauty. We strive to deliver exceptional service and a relaxing experience for every client.</p>
+      </div>
+    </div>
+  </section>
 
-        <div class="form-group">
-          <label for="time">Time:</label>
-          <input type="time" id="time" name="time" required>
-        </div>
+  <section id="contact" class="section-bg">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-form">
+        <form id="contactForm" action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
 
-        <div class="form-group">
-          <label for="service">Select a Service:</label>
-          <select id="service" name="service" required>
-            <option value="manicure">Manicure</option>
-            <option value="pedicure">Pedicure</option>
-            <option value="nail-art">Nail Art</option>
-          </select>
-        </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
 
-        <button type="submit">Book Now</button>
-      </form>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
     </div>
   </section>
 
