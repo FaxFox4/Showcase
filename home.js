@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('nav ul li a');
     const hero = document.querySelector('.hero');
     const ctaButton = document.querySelector('.cta-button');
-    const lightningButton = document.getElementById('lightning-button');
     const lightningOverlay = document.getElementById('lightning-overlay');
 
     window.addEventListener('scroll', () => {
@@ -28,7 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
         ctaButton.classList.remove('animated');
     });
 
-    lightningButton.addEventListener('click', () => {
+    ctaButton.addEventListener('click', () => {
+        // Add the lightning effect class to the button
+        ctaButton.classList.add('lightning-effect');
+
         // Show the lightning overlay
         lightningOverlay.style.display = 'block';
         setTimeout(() => {
@@ -45,3 +47,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000); // Duration of the lightning effect
     });
 });
+
