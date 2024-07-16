@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hero = document.querySelector('.hero');
     const ctaButton = document.querySelector('.cta-button');
     const lightningOverlay = document.getElementById('lightning-overlay');
+    const header = document.querySelector('header');
 
     window.addEventListener('scroll', () => {
         let scrollPosition = window.scrollY;
@@ -28,6 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     ctaButton.addEventListener('click', () => {
+        // Calculate the height and position for the lightning overlay
+        const buttonRect = ctaButton.getBoundingClientRect();
+        const headerHeight = header.offsetHeight;
+        const overlayHeight = buttonRect.top - headerHeight;
+
+        lightningOverlay.style.top = `${headerHeight}px`;
+        lightningOverlay.style.height = `${overlayHeight}px`;
+
         // Add the lightning effect class to the button
         ctaButton.classList.add('lightning-effect');
 
