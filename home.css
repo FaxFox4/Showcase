@@ -161,11 +161,17 @@ nav ul li a:hover::before {
     transform: scale(1.1);
 }
 
-.glove-animation {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin-top: 2rem;
+.flame-effect {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.flame-effect img {
+    width: 300px;
+    height: auto;
 }
 
 footer {
