@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const headerHeight = header.offsetHeight;
         const overlayHeight = buttonRect.top - headerHeight;
 
-        lightningOverlay.style.top = `${headerHeight}px`;
-        lightningOverlay.style.height = `${overlayHeight + 20}px`; // Slightly increase the size
+        lightningOverlay.style.top = `${headerHeight - overlayHeight * 0.2}px`; // Move the start up
+        lightningOverlay.style.height = `${overlayHeight * 1.2}px`; // Slightly increase the size
 
         // Add the lightning effect class to the button
         ctaButton.classList.add('lightning-effect');
@@ -53,6 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 lightningOverlay.style.display = 'none';
                 window.location.href = 'next-section.html'; // Redirect to the next section HTML
             }, 500);
-        }, 1000); // Duration of the lightning effect
+        }, 700); // Duration of the lightning effect
     });
 });
