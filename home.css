@@ -166,6 +166,43 @@ nav ul li a:hover::before {
     transform: scale(1.1);
 }
 
+.glove-animation {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glove {
+    width: 100px;
+    height: 100px;
+    background-color: #ff0;
+    border-radius: 50%;
+    position: absolute;
+    animation: punch 1s infinite;
+}
+
+.left-glove {
+    left: -50px;
+    animation-delay: 0.5s;
+}
+
+.right-glove {
+    right: -50px;
+}
+
+@keyframes punch {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-30px) scale(1.1);
+    }
+}
+
 footer {
     background-color: #111;
     text-align: center;
