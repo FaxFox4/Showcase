@@ -24,16 +24,6 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    animation: slideDown 0.5s ease-in-out;
-}
-
-@keyframes slideDown {
-    from {
-        top: -70px;
-    }
-    to {
-        top: 0;
-    }
 }
 
 .logo {
@@ -41,7 +31,6 @@ header {
     color: #f00;
     text-transform: uppercase;
     letter-spacing: 2px;
-    animation: fadeIn 2s ease-in-out;
 }
 
 nav ul {
@@ -182,11 +171,36 @@ nav ul li a:hover::before {
     transform: scale(1.1);
 }
 
-footer {
-    background-color: #111;
-    text-align: center;
-    padding: 1rem 0;
-    position: relative;
-    bottom: 0;
+.lightning-navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    cursor: pointer;
+}
+
+.lightning-navigation img {
+    width: 50px;
+    height: auto;
+}
+
+#lightning-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background: url('lightning.gif') center center no-repeat;
+    background-size: cover;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.next-section {
+    padding: 100px 20px;
+    background-color: #222;
+    color: #fff;
 }
