@@ -97,6 +97,26 @@ nav ul li a:hover::before {
     z-index: -1;
 }
 
+.flame-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.flame-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .hero-content {
     z-index: 2;
     max-width: 600px;
@@ -159,19 +179,6 @@ nav ul li a:hover::before {
 .cta-button:hover {
     background-color: #ff6600;
     transform: scale(1.1);
-}
-
-.flame-effect {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-}
-
-.flame-effect img {
-    width: 300px;
-    height: auto;
 }
 
 footer {
