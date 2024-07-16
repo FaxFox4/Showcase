@@ -47,4 +47,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000); // Duration of the lightning effect
     });
 });
-
