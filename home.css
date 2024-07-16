@@ -155,6 +155,8 @@ nav ul li a:hover::before {
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.3s;
     animation: pulsate 1.5s infinite alternate;
+    position: relative;
+    z-index: 3;
 }
 
 @keyframes pulsate {
@@ -171,20 +173,6 @@ nav ul li a:hover::before {
     transform: scale(1.1);
 }
 
-.lightning-navigation {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-    cursor: pointer;
-}
-
-.lightning-navigation img {
-    width: 50px;
-    height: auto;
-}
-
 #lightning-overlay {
     display: none;
     position: fixed;
@@ -197,4 +185,32 @@ nav ul li a:hover::before {
     z-index: 1000;
     opacity: 0;
     transition: opacity 0.5s ease;
+}
+
+/* Lightning effect for the button */
+@keyframes lightningStrike {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    25% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    75% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+.cta-button.lightning-effect {
+    animation: lightningStrike 0.5s ease-in-out;
 }
