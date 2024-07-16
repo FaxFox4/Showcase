@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const overlayHeight = buttonRect.top - headerHeight;
 
         lightningOverlay.style.top = `${headerHeight}px`;
-        lightningOverlay.style.height = `${overlayHeight}px`;
+        lightningOverlay.style.height = `${overlayHeight + 20}px`; // Slightly increase the size
 
         // Add the lightning effect class to the button
         ctaButton.classList.add('lightning-effect');
