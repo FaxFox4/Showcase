@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctaButton = document.querySelector('.cta-button');
     const lightningButton = document.getElementById('lightning-button');
     const lightningOverlay = document.getElementById('lightning-overlay');
-    const nextSection = document.getElementById('next-section');
 
     window.addEventListener('scroll', () => {
         let scrollPosition = window.scrollY;
@@ -36,12 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
             lightningOverlay.style.opacity = '1';
         }, 10);
 
-        // After the lightning effect, scroll to the next section
+        // After the lightning effect, navigate to the next section
         setTimeout(() => {
             lightningOverlay.style.opacity = '0';
             setTimeout(() => {
                 lightningOverlay.style.display = 'none';
-                nextSection.scrollIntoView({ behavior: 'smooth' });
+                window.location.href = 'next-section.html'; // Redirect to the next section HTML
             }, 500);
         }, 1000); // Duration of the lightning effect
     });
