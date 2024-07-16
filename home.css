@@ -204,3 +204,38 @@ nav ul li a:hover::before {
     background-color: #222;
     color: #fff;
 }
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.service {
+    text-align: center;
+    width: 30%;
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.service h3 {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    color: #ff0;
+}
+
+.service p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #ccc;
+}
