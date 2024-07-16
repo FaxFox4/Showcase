@@ -176,11 +176,10 @@ nav ul li a:hover::before {
 #lightning-overlay {
     display: none;
     position: absolute;
-    top: calc(50% - 20vh); /* Adjust this value as needed */
+    top: 0; /* Initial positioning */
     left: 50%;
-    width: 40%;
-    height: 40%;
-    transform: translate(-50%, 0);
+    transform: translateX(-50%);
+    width: 100%; /* Adjust width to cover the button area */
     background: url('lightning.png') center center no-repeat;
     background-size: contain;
     z-index: 1000;
