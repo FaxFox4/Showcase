@@ -176,10 +176,10 @@ nav ul li a:hover::before {
 #lightning-overlay {
     display: none;
     position: absolute;
-    top: -30%; /* Move the start of the lightning further up */
+    top: -25%; /* Move the start of the lightning further up */
     left: 50%;
     transform: translateX(-50%);
-    width: 140%; /* Further increase the size */
+    width: 130%; /* Further increase the size */
     background: url('lightning.png') center center no-repeat;
     background-size: contain;
     z-index: 1000;
@@ -198,11 +198,11 @@ nav ul li a:hover::before {
         transform: scale(1.1);
     }
     30% {
-        opacity: 0.8;
+        opacity: 0.6;
         transform: scale(1);
     }
     50% {
-        opacity: 1;
+        opacity: 0.2;
         transform: scale(1.05);
     }
     70% {
