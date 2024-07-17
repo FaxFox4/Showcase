@@ -11,7 +11,7 @@ body {
     background-color: #000;
     color: #fff;
     overflow-x: hidden;
-    transition: transform 0.7s ease-in-out; /* Smooth transition for the zoom effect */
+    position: relative;
 }
 
 header {
@@ -172,4 +172,24 @@ nav ul li a:hover::before {
 .cta-button:hover {
     background-color: #ff6600;
     transform: scale(1.1);
+}
+
+/* Fire video overlay */
+#fire-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+}
+
+#fire-overlay video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
