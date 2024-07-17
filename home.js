@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('nav ul li a');
     const hero = document.querySelector('.hero');
     const ctaButton = document.getElementById('cta-button');
+    const fireOverlay = document.getElementById('fire-overlay');
 
     window.addEventListener('scroll', () => {
         let scrollPosition = window.scrollY;
@@ -18,15 +19,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    ctaButton.addEventListener('mouseover', () => {
-        ctaButton.classList.add('animated');
+    function transitionToNextPage(url) {
+        fireOverlay.style.display = 'block';
+        fireOverlay.style.opacity = '1';
+        fireOverlay.querySelector('video').play();
+
+        setTimeout(() => {
+            window.location.href = url; // Redirect to the specified URL
+        }, 1500); // Adjust timing as needed for smooth transition
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            transitionToNextPage(event.target.href);
+        });
     });
 
-    ctaButton.addEventListener('mouseout', () => {
-        ctaButton.classList.remove('animated');
-    });
-
-    ctaButton.addEventListener('click', () => {
-        window.location.href = 'next-section.html'; // Redirect to the next section HTML
+    ctaButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        transitionToNextPage('next-section.html'); // Redirect to the next section HTML
     });
 });
