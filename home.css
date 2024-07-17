@@ -11,7 +11,7 @@ body {
     background-color: #000;
     color: #fff;
     overflow-x: hidden;
-    transition: transform 0.7s ease-in-out; /* Faster transition for the zoom effect */
+    transition: transform 0.7s ease-in-out; /* Smooth transition for the zoom effect */
 }
 
 header {
@@ -172,54 +172,4 @@ nav ul li a:hover::before {
 .cta-button:hover {
     background-color: #ff6600;
     transform: scale(1.1);
-}
-
-#lightning-overlay {
-    display: none;
-    position: absolute;
-    top: -30%; /* Move the start of the lightning further up */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 140%; /* Further increase the size */
-    background: url('lightning.png') center center no-repeat;
-    background-size: contain;
-    z-index: 1000;
-    opacity: 0.1;
-    transition: opacity 0.2s ease, transform 0.7s ease-in-out; /* Add transform transition */
-}
-
-/* Lightning effect for the button */
-@keyframes lightningStrike {
-    0% {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    10% {
-        opacity: 1;
-        transform: scale(1.1);
-    }
-    30% {
-        opacity: 0.8;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.05);
-    }
-    70% {
-        opacity: 0.8;
-        transform: scale(1);
-    }
-    90% {
-        opacity: 1;
-        transform: scale(1.05);
-    }
-    100% {
-        opacity: 0;
-        transform: scale(1);
-    }
-}
-
-.cta-button.lightning-effect {
-    animation: lightningStrike 0.3s ease-in-out; /* Adjust timing for more realism */
 }
