@@ -11,7 +11,7 @@ body {
     background-color: #000;
     color: #fff;
     overflow-x: hidden;
-    transition: transform 1.5s ease-in-out; /* Smooth transition for the zoom effect */
+    transition: transform 0.7s ease-in-out; /* Faster transition for the zoom effect */
 }
 
 header {
@@ -185,7 +185,7 @@ nav ul li a:hover::before {
     background-size: contain;
     z-index: 1000;
     opacity: 0.1;
-    transition: opacity 0.2s ease, transform 1.5s ease-in-out; /* Add transform transition */
+    transition: opacity 0.2s ease, transform 0.7s ease-in-out; /* Add transform transition */
 }
 
 /* Lightning effect for the button */
