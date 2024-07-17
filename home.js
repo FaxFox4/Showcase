@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lightningOverlay.style.display = 'block';
         setTimeout(() => {
             lightningOverlay.style.opacity = '1';
-            body.style.transform = 'scale(1.5)'; // Zoom in effect
+            body.style.transform = 'scale(5)'; // Dramatic zoom-in effect
         }, 10);
 
         // After the lightning effect, navigate to the next section
