@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctaButton = document.querySelector('.cta-button');
     const lightningOverlay = document.getElementById('lightning-overlay');
     const header = document.querySelector('header');
+    const body = document.body;
 
     window.addEventListener('scroll', () => {
         let scrollPosition = window.scrollY;
@@ -44,13 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
         lightningOverlay.style.display = 'block';
         setTimeout(() => {
             lightningOverlay.style.opacity = '1';
+            body.style.transform = 'scale(1.5)'; // Zoom in effect
         }, 10);
 
         // After the lightning effect, navigate to the next section
         setTimeout(() => {
             lightningOverlay.style.opacity = '0';
             setTimeout(() => {
-                lightningOverlay.style.display = 'none';
                 window.location.href = 'next-section.html'; // Redirect to the next section HTML
             }, 200);
         }, 300); // Duration of the lightning effect
